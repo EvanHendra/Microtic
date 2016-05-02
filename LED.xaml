@@ -1,0 +1,173 @@
+﻿<Page
+    x:Class="Microtic.LED"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Second.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Third.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fourth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fourth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Seventh.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Seventh.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,20,10,81.333</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.Column)" Value="1"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,20,10,-18</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Sixth.(Grid.Column)" Value="2"/>
+                        <Setter Target="Sixth.(Grid.RowSpan)" Value="4"/>
+                        <Setter Target="Sixth.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="Sixth.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="Seventh.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,19.667,10,179.333</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Seventh.(Grid.Row)" Value="2"/>
+                        <Setter Target="Seventh.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="Seventh.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="Seventh.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="Seventh.(Grid.Column)" Value="1"/>
+                        <Setter Target="Sixth.(FrameworkElement.VerticalAlignment)" Value="Stretch"/>
+                        <Setter Target="Sixth.(FrameworkElement.Height)" Value="NaN"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <Storyboard>
+                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock" d:IsOptimized="True"/>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <TextBlock Text="Light Emitting Diode" FontSize="36"/>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0" >
+                    <Image Source="Assets/LED1.jpg"/>
+                </StackPanel>
+                <StackPanel Name="Third" Margin="20,20,0,0" Grid.Row="2">
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap">
+                		Light Emitting Diode atau sering disingkat dengan LED adalah komponen elektronika yang dapat memancarkan cahaya monokromatik ketika diberikan tegangan maju. LED merupakan keluarga Dioda yang terbuat dari bahan semikonduktor. Warna-warna Cahaya yang dipancarkan oleh LED tergantung pada jenis bahan semikonduktor yang dipergunakannya. LED juga dapat memancarkan sinar inframerah yang tidak tampak oleh mata seperti yang sering kita jumpai pada Remote Control TV ataupun Remote Control perangkat elektronik lainnya. Bentuk LED mirip dengan sebuah bohlam (bola lampu) yang kecil dan dapat dipasangkan dengan mudah ke dalam berbagai perangkat elektronika. Berbeda dengan Lampu Pijar, LED tidak memerlukan pembakaran filamen sehingga tidak menimbulkan panas dalam menghasilkan cahaya. Oleh karena itu, saat ini LED (Light Emitting Diode) yang bentuknya kecil telah banyak digunakan sebagai lampu penerang dalam LCD TV yang mengganti lampu tube
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fourth" Margin="20,20,0,0" Grid.Row="3">
+                    <Image Source="Assets/LED2.jpg"/>
+                    <TextBlock Text="Bentuk dan simbol LED" HorizontalAlignment="Center"/>
+                    <TextBlock TextWrapping="Wrap">
+                        Seperti dikatakan sebelumnya, LED merupakan keluarga dari Dioda yang terbuat dari Semikonduktor. Cara kerjanya pun hampir sama dengan Dioda yang memiliki dua kutub yaitu kutub Positif (P) dan Kutub Negatif (N). LED hanya akan memancarkan cahaya apabila dialiri tegangan maju (bias forward) dari Anoda menuju ke Katoda.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fifth" Margin="20,20,0,0" Grid.Row="4">
+                    <TextBlock TextWrapping="Wrap">
+                        LED terdiri dari sebuah chip semikonduktor yang di doping sehingga menciptakan junction P dan N. Yang dimaksud dengan proses doping dalam semikonduktor adalah proses untuk menambahkan ketidakmurnian (impurity) pada semikonduktor yang murni sehingga menghasilkan karakteristik kelistrikan yang diinginkan. Ketika LED dialiri tegangan maju atau bias forward yaitu dari Anoda (P) menuju ke Katoda (K), Kelebihan Elektron pada N-Type material akan berpindah ke wilayah yang kelebihan Hole (lubang) yaitu wilayah yang bermuatan positif (P-Type material). Saat Elektron berjumpa dengan Hole akan melepaskan photon dan memancarkan cahaya monokromatik (satu warna).Cara kerja LED (Light Emitting Diode)
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Seventh" Margin="20,20,0,0" Grid.Row="5" >
+                    <Image Source="Assets/LED4.png"/>
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        Untuk mengetahui polaritas terminal Anoda (+) dan Katoda (-) pada LED. Kita dapat melihatnya secara fisik berdasarkan gambar diatas. Ciri-ciri Terminal Anoda pada LED adalah kaki yang lebih panjang dan juga Lead Frame yang lebih kecil. Sedangkan ciri-ciri Terminal Katoda adalah Kaki yang lebih pendek dengan Lead Frame yang besar serta terletak di sisi yang Flat.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Sixth" Margin="20,20,0,0" Grid.Row="6" >
+                    <TextBlock TextWrapping="Wrap">
+                        LED atau Light Emitting Diode yang memancarkan cahaya ketika dialiri tegangan maju ini juga dapat digolongkan sebagai Transduser yang dapat mengubah Energi Listrik menjadi Energi Cahaya.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        Saat ini, LED telah memiliki beranekaragam warna, diantaranya seperti warna merah, kuning, biru, putih, hijau, jingga dan infra merah. Keanekaragaman Warna pada LED tersebut tergantung pada wavelength (panjang gelombang) dan senyawa semikonduktor yang dipergunakannya.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        Masing-masing Warna LED (Light Emitting Diode) memerlukan tegangan maju (Forward Bias) untuk dapat menyalakannya. Tegangan Maju untuk LED tersebut tergolong rendah sehingga memerlukan sebuah Resistor untuk membatasi Arus dan Tegangannya agar tidak merusak LED yang bersangkutan. Tegangan Maju biasanya dilambangkan dengan tanda VF.
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        Teknologi LED memiliki berbagai kelebihan seperti tidak menimbulkan panas, tahan lama, tidak mengandung bahan berbahaya seperti merkuri, dan hemat listrik serta bentuknya yang kecil ini semakin popular dalam bidang teknologi pencahayaan. Berbagai produk yang memerlukan cahaya pun mengadopsi teknologi Light Emitting Diode (LED) ini.
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

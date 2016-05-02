@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Microtic.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF054726" Margin="0,0,0,10">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="textBlock1.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,115,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="textBlock1.(Grid.Column)" Value="1"/>
+                        <Setter Target="textBlock1.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="textBlock1.(FrameworkElement.HorizontalAlignment)" Value="Right"/>
+                        <Setter Target="textBlock1.(TextBlock.TextAlignment)" Value="Right"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="textBlock1.(TextBlock.TextAlignment)" Value="Left"/>
+                        <Setter Target="textBlock1.(FrameworkElement.HorizontalAlignment)" Value="Left"/>
+                        <Setter Target="textBlock1.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>43,113,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="199*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Tentang Microtic" VerticalAlignment="Top" Width="118" Height="23" Grid.ColumnSpan="2" SelectionChanged="textBlock_SelectionChanged" Foreground="White"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Right" FontSize="12" Margin="0,116,22,0" TextWrapping="Wrap" Text="Microtic merupakan aplikasi yang berisi penjelasan komponen-komponen elektronika, jadi dengan aplikasi ini teman-teman akan lebih mudah memahami tentang komponen-komponen tersebut ^^" VerticalAlignment="Top" Height="109" Width="248" Foreground="White" Grid.Column="1"/>
+
+    </Grid>
+</Page>

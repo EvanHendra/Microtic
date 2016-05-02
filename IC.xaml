@@ -1,0 +1,135 @@
+﻿<Page
+    x:Class="Microtic.IC"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Second.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Third.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fourth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fourth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,20,10,132.333</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.Column)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.RowSpan)" Value="3"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,20,10,72.333</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.Column)" Value="2"/>
+                        <Setter Target="Sixth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Sixth.(Grid.RowSpan)" Value="2"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <TextBlock Text="Integrated Circuit" FontSize="36"/>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
+                    <TextBlock TextWrapping="Wrap">
+                        Integrated Circuit (IC) sebenarnya adalah suatu rangkaian elektronik yang dikemas menjadi satu kemasan kecil atau dengan kata lain yaitu beberapa komponen elektronika yang dijadikan satu wadah sehingga membentuk sebuah komponen
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Third" Margin="20,20,0,0" Grid.Row="2">
+                    <Image Source="Assets/IC1.jpg"/>
+                    <TextBlock Text="Macam-macam IC" Margin="0,20,0,0" HorizontalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Name="Fourth" Margin="20,20,0,0" Grid.Row="3">
+                    <TextBlock TextWrapping="Wrap">
+                        Dalam beberapa rangkaian yang besar dapat diintegrasikan menjadi satu dan dikemas dalam kemasan yang kecil. Sementara satu IC yang kecil dapat membuat ratusan hingga ribuan komputer. Berikut dibawah ini satu gambar IC yang bentuknya seperti transistor.
+                    </TextBlock>
+                    <Image Source="Assets/IC2.png" Margin="0,20,0,0"/>
+                </StackPanel>
+                <StackPanel Name="Fifth" Margin="20,20,0,0" Grid.Row="4" d:LayoutOverrides="TopPosition, BottomPosition">
+                    <TextBlock TextWrapping="Wrap">
+                        Bentuk IC yang menyerupai sisir disebut menyerupai sisir karena kaki-kakinya hanya satu sisi saja biasa pula IC dinamakan IC SINGLE INLINE sedangkan yang memiliki kaki-kaki di kedua sisinya dinamakan IC DUAL LINE
+                    </TextBlock>
+                    <Image Source="Assets/IC3.png" Margin="0,20,0,0"/>
+                    <Image Source="Assets/IC5.png" Margin="0,10,0,0"/>
+                </StackPanel>
+                <StackPanel Name="Sixth" Margin="20,20,0,0" Grid.Row="6" d:LayoutOverrides="TopPosition, BottomPosition">
+                    <TextBlock TextWrapping="Wrap">
+                        Bentuk IC yang segiempat dengan kaki-kaki berada pada keempat sisinya. Bentuk yang seperti ini kebanyakan digunakan pada CPU komputer salah satu contohnya seperti gambar di bawah ini.
+                    </TextBlock>
+                    <Image Source="Assets/IC4.png"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

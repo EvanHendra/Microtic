@@ -1,0 +1,148 @@
+﻿<Page
+    x:Class="Microtic.Transistor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Second.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Third.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Fourth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fourth.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Seventh.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Seventh.(Grid.ColumnSpan)" Value="2"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>10,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.Column)" Value="1"/>
+                        <Setter Target="Sixth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Seventh.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Seventh.(Grid.Row)" Value="2"/>
+                        <Setter Target="Seventh.(Grid.RowSpan)" Value="5"/>
+                        <Setter Target="Seventh.(Grid.Column)" Value="1"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <TextBlock Text="Transistor" FontSize="36"/>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
+                    <TextBlock TextWrapping="Wrap">
+                        Transistor adalah komponen elektronika semikonduktor yang memiliki 3 kaki elektroda, yaitu Basis (Dasar), Kolektor (Pengumpul) dan Emitor (Pemancar). Komponen ini berfungsi sebagai penguat, pemutus dan penyambung (switching), stabilitasi tegangan, modulasi sinyal dan masih banyak lagi fungsi lainnya. Selain itu, transistor juga dapat digunakan sebagai kran listrik sehingga dapat mengalirkan listrik dengan sangat akurat dan sumber listriknya.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Third" Margin="20,20,0,0" Grid.Row="2">
+                    <TextBlock TextWrapping="Wrap">
+                        Transistor sebenarnya berasal dari kata “transfer” yang berarti pemindahan dan “resistor” yang berarti penghambat. Dari kedua kata tersebut dapat kita simpulkan, pengertian transistor adalah pemindahan atau peralihan bahan setengah penghantar menjadi suhu tertentu. Transistor pertama kali ditemukan pada tahun 1948 oleh William Shockley, John Barden dan W.H, Brattain. Tetapi, komponen ini mulai digunakan pada tahun 1958. Jenis Transistor terbagi menjadi 2, yaitu transistor tipe P-N-P dan transistor N-P-N.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fourth" Margin="20,20,0,0" Grid.Row="3">
+                    <TextBlock TextWrapping="Wrap">
+                        Cara Kerja Transistor hampir sama dengan resistor yang mempunyai tipe dasar modern. Tipe dasar modern terbagi menjadi 2, yaitu Bipolar Junction Transistor atau biasa di singkat BJT dan Field Effect Transistor atau FET. BJT dapat bekerja bedasarkan arus inputnya, sedangkan FET bekerja berdasarkan tegangan inputnya.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fifth" Margin="20,20,0,0" Grid.Row="4">
+                    <TextBlock TextWrapping="Wrap">
+                        Dalam dunia elektronika modern, transistor merupakan komponen yang sangat penting terutama dalam rangkaian analog karena fungsinya sebagai penguat. Rangkaian analog terdiri dari pengeras suara, sumber listrik stabil dan penguat sinyal radio. Tidak hanya rangkaian analog, di dalam rangkaian digital juga terdapat transistor yang digunakan sebagai saklar dengan kecepatan tinggi. Beberapa transistor juga dapat di rangkai sehingga berfungsi sebagai logic gate.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Sixth" Margin="20,20,0,0" Grid.Row="5" d:LayoutOverrides="TopPosition, BottomPosition">
+                    <TextBlock TextWrapping="Wrap">
+                        Jenis-Jenis Transistor juga berbeda-beda, berdasarkan kategorinya dibedakan seperti materi semikonduktor, kemasan fisik, tipe, polaritas, maximum kapasitas daya, maximum frekuensi kerja, aplikasi dan masih banyak lagi jenis yang lainnya.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Seventh" Margin="20,20,0,0" Grid.Row="6">
+                    <Image Source="Assets/Transistor1.jpg"/>
+                    <TextBlock Text="Struktur transistor" HorizontalAlignment="Center"/>
+                    <Image Source="Assets/Transistor2.jpg" Margin="0,20,0,0"/>
+                    <TextBlock Text="Jenis-jenis transistor" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

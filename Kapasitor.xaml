@@ -1,0 +1,130 @@
+﻿<Page
+    x:Class="Microtic.Kapasitor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Second.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Third.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Fourth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fourth.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.ColumnSpan)" Value="2"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Sixth.(Grid.RowSpan)" Value="5"/>
+                        <Setter Target="Sixth.(Grid.Column)" Value="1"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <TextBlock Text="Kapasitor" FontSize="36"/>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0" d:LayoutOverrides="TopMargin, BottomMargin, TopPosition, BottomPosition">
+                    <TextBlock TextWrapping="Wrap">
+                        Kapasitor adalah komponen elektronika yang dapat menyimpan dan melepaskan muatan listrik dalam waktu tidak tertentu. Berbeda dengan batere atau akumulator, kapasitor menyimpan dan melepaskan muatan tanpa terjadi perubahan kimia dalam kapastor tersebut. Kapasitor dibangun dari 2 buah plat yang dipisahkan oleh bahan dielektrik. Bahan yang digunakan sebagai dielektrik dalam suatu kapasitor ada beberapa jenis diantaranya udara, keramik, kaca, milar, mika, kertas, tantalum dan elektrolit.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Third" Margin="20,20,0,0" Grid.Row="2">
+                    <TextBlock TextWrapping="Wrap">
+                        Kapasitor elektrolit dan kapasitor tantalum adalah kapasitor yang mempunyai kutub atau polar, sering disebut juga dengan nama kapasitor polar. Kapasitor film terdiri dari beberapa jenis yaitu polyester film, poly propylene film atau polysterene film.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fourth" Margin="20,20,0,0" Grid.Row="3">
+                    <TextBlock TextWrapping="Wrap">
+                        Jika kedua ujung plat metal diberi tegangan listrik, maka muatan-muatan positif akan mengumpul pada salah satu kaki (elektroda) metalnya dan pada saat yang sama muatan-muatan negatif terkumpul pada ujung metal yang satu lagi. Muatan positif tidak dapat mengalir menuju ujung kutup negatif dan sebaliknya muatan negatif tidak bisa menuju ke ujung kutup positif, karena terpisah oleh bahan dielektrik yang non-konduktif. Muatan elektrik ini “tersimpan” selama tidak ada konduksi pada ujung-ujung kakinya. Di alam bebas, phenomena kapasitor ini terjadi pada saat terkumpulnya muatan-muatan positif dan negatif di awan. Kemampuan untuk menyimpan muatan listrik pada kapasitor disebuat dengan kapasitansi atau kapasitas. Kapasitansi didefenisikan sebagai kemampuan dari suatu kapasitor untuk dapat menampung muatan elektron.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fifth" Margin="20,20,0,0" Grid.Row="4">
+                    <TextBlock TextWrapping="Wrap">
+                        Beberapa hal yang dapat mengakibatkan kerusakan pada kapasitor adalah lamanya pemakaian kapasitor, tegangan yang diberikan melebihi batas maksimumtegangan kerja kapasitor tersebut dan kesalahan pemasangan polaritas kapasitor.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Sixth" Margin="20,20,0,0" Grid.Row="6">
+                    <Image Source="Assets/Kapasitor1.png"/>
+                    <TextBlock Text="Struktur transistor" HorizontalAlignment="Center"/>
+                    <Image Source="Assets/Kapasitor2.jpg" Margin="0,20,0,0"/>
+                    <TextBlock Text="Jenis-jenis transistor" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

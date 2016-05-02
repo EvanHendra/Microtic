@@ -1,0 +1,172 @@
+﻿<Page
+    x:Class="Microtic.PushButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Second.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Third.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fourth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fourth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Seventh.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Seventh.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Eighth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Eighth.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.Column)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.Column)" Value="1"/>
+                        <Setter Target="Sixth.(Grid.Row)" Value="3"/>
+                        <Setter Target="Seventh.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Seventh.(Grid.Column)" Value="2"/>
+                        <Setter Target="Seventh.(Grid.Row)" Value="1"/>
+                        <Setter Target="Seventh.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="Eighth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Eighth.(Grid.Column)" Value="2"/>
+                        <Setter Target="Eighth.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="Eighth.(Grid.Row)" Value="3"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <TextBlock Text="Push Button" FontSize="36"/>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0" >
+                    <Image Source="Assets/PushButton1.jpg"/>
+                </StackPanel>
+                <StackPanel Name="Third" Margin="20,20,0,0" Grid.Row="2">
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap">
+                        Push Button atau Push button switch (saklar tombol tekan) adalah perangkat / saklar sederhana yang berfungsi untuk menghubungkan atau memutuskan aliran arus listrik dengan sistem kerja tekan unlock (tidak mengunci). Sistem kerja unlock disini berarti saklar akan bekerja sebagai device penghubung atau pemutus aliran arus listrik saat tombol ditekan, dan saat tombol tidak ditekan (dilepas), maka saklar akan kembali pada kondisi normal.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fourth" Margin="20,20,0,0" Grid.Row="3">
+                    <TextBlock TextWrapping="Wrap">
+                        Karena sistem kerjanya yang unlock dan langsung berhubungan dengan operator, push button switch menjadi device paling utama yang biasa digunakan untuk memulai dan mengakhiri kerja mesin di industri. Secanggih apapun sebuah mesin bisa dipastikan sistem kerjanya tidak terlepas dari keberadaan sebuah saklar seperti push button switch atau perangkat lain yang sejenis yang bekerja mengatur pengkondisian On dan Off.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fifth" Margin="20,20,0,0" Grid.Row="4">
+                    <Image Source="Assets/PushButton2.jpg" />
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        Sebagai device penghubung atau pemutus, push button switch hanya memiliki 2 kondisi, yaitu On dan Off (1 dan 0). Istilah On dan Off ini menjadi sangat penting karena semua perangkat listrik yang memerlukan sumber energi listrik pasti membutuhkan kondisi On dan Off.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Sixth" Margin="20,20,0,0" Grid.Row="5" >
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        Berdasarkan fungsi kerjanya yang menghubungkan dan memutuskan, push button switch mempunyai 2 tipe kontak yaitu NC (Normally Close) dan NO (Normally Open).
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Seventh" Margin="20,20,0,0" Grid.Row="6" >
+                    <Image Source="Assets/PushButton3.jpg" />
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        •NO (Normally Open), merupakan kontak terminal dimana kondisi normalnya terbuka (aliran arus listrik tidak mengalir). Dan ketika tombol saklar ditekan, kontak yang NO ini akan menjadi menutup (Close) dan mengalirkan atau menghubungkan arus listrik. Kontak NO digunakan sebagai penghubung atau menyalakan sistem circuit (Push Button ON).
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Eighth" Margin="20,20,0,0" Grid.Row="7">
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        •NC (Normally Close), merupakan kontak terminal dimana kondisi normalnya tertutup (mengalirkan arus litrik). Dan ketika tombol saklar push button ditekan, kontak NC ini akan menjadi membuka (Open), sehingga memutus aliran arus listrik. Kontak NC digunakan sebagai pemutus atau mematikan sistem circuit (Push Button Off).
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

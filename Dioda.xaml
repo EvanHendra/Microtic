@@ -1,0 +1,119 @@
+﻿<Page
+    x:Class="Microtic.Dioda"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Second.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Third.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Fourth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fourth.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.ColumnSpan)" Value="2"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,20,20,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.Column)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Fifth.(Grid.RowSpan)" Value="5"/>
+                        <Setter Target="image.(FrameworkElement.Height)" Value="366"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <TextBlock Text="Dioda" FontSize="36"/>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0" >
+                    <Image x:Name="image" Source="Assets/Dioda1.jpg"/>
+                </StackPanel>
+                <StackPanel Name="Third" Margin="20,20,0,0" Grid.Row="2">
+                    <TextBlock TextWrapping="Wrap">
+                        Dioda adalah komponen aktif yang memiliki dua kutub dan bersifat semikonduktor. Dioda juga bisa dialiri arus listrik ke satu arah dan menghambat arus dari arah sebaliknya. Dioda sebenarnya tidak memiliki karakter yang sempurna, melainkan memiliki karakter yang berhubungan dengan arus dan tegangan komplek yang tidak linier dan seringkali tergantung pada teknologi yang digunakan serta parameter penggunaannya.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fourth" Margin="20,20,0,0" Grid.Row="3">
+                    <TextBlock TextWrapping="Wrap">
+                        Awal mulanya dioda adalah sebuah piranti kristal Cat’s Wahisker dan tabung hampa. Sedangkan pada saat ini, dioda sudah banyak dibuat dari bahan semikonduktor, contohnya : Silikon dan Germanium. Di karenakan pengembangannya yang dilakukan secara terpisah, dioda kristal (semikonduktor) lebih populer di bandingkan dengan dioda termionik. Dioda termionik pertama kali ditemukan oleh Frederick Guthrie pada tahun 1873, sedangkan dioda kristal ditemukan pada tahun 1874 oleh peneliti asal Jerman, Karl Ferdinand Braun.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fifth" Margin="20,20,0,0" Grid.Row="4">
+                    <Image Source="Assets/Dioda2.jpg" />
+                    <TextBlock Text="Bentuk dan lambang dioda" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                    <TextBlock  Margin="0,20,0,0" TextWrapping="Wrap">
+                        Dioda Termionik adalah piranti katub yang merupakan susunan elektroda di dalam sampul gelas. Bentuk pertama kali dari dioda termionik hampir sama dengan bola lampu pijar. Di dalam katub dioda termionik, arus listrik yang melalui filamen pemanas secara tidak langsung memanaskan katoda. Elektroda internal lainnya dilapisi dengan campuran barium dan strontium oksida yang merupakan oksida dari logam alkali tanah. Dari kegiatan tersebut menghasilkan pancaran termionik elektron ke ruang hampa. Walaupun demikian, elektron tidak dapat di pancarkan dengan mudah ke permukaan anoda yang tidak terpanasi ketika polaritas tegangan di balik.
+                    </TextBlock>
+                    <TextBlock  Margin="0,20,0,0" TextWrapping="Wrap">
+                        Dioda Semikondutor sebagian besar terdapat pada teknologi pertemuan P-N semikonduktor. Dioda P-N terdapat arus yang mengalir dari sisi Tipe-P (anoda) menuju sisi Tipe-N (katoda), akan tetapi tidak dapat mengalir ke arah sebaliknya. Dioda semikonduktor memiliki tipe lain yaitu dioda schottky yang di bentuk dari pertemuan antara logam dan semikonduktor sebagai ganti dari pertemuan P-N konvensional.
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,146 @@
+﻿<Page
+    x:Class="Microtic.Downloader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.Setters>
+                        <Setter Target="First.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Second.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Third.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fourth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fourth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Fifth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Fifth.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,20,10,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="Desktop">
+                    <VisualState.Setters>
+                        <Setter Target="Sixth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,20,20,-41.667</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="Sixth.(Grid.Column)" Value="1"/>
+                        <Setter Target="Sixth.(Grid.Row)" Value="1"/>
+                        <Setter Target="Sixth.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="image.(FrameworkElement.Height)" Value="370"/>
+                        <Setter Target="image.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,0,196,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="image1.(FrameworkElement.Height)" Value="87"/>
+                        <Setter Target="image1.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,20,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="image1.(FrameworkElement.HorizontalAlignment)" Value="Left"/>
+                        <Setter Target="image1.(FrameworkElement.Width)" Value="230"/>
+                        <Setter Target="image2.(FrameworkElement.Height)" Value="196"/>
+                        <Setter Target="image2.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,0,192,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="First" Margin="20,20,0,0">
+                    <TextBlock Text="Downloader" FontSize="36"/>
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,20,0,0" >
+                    <Image x:Name="image" Source="Assets/Downloader1.jpg"/>
+                </StackPanel>
+                <StackPanel Name="Third" Margin="20,20,0,0" Grid.Row="2">
+                    <TextBlock x:Name="textBlock" TextWrapping="Wrap">                        
+                        Downloader bisa juga diartikan sebagai jembatan penghubung antara komputer dengan mikrokontroler. Yang mana file.hex yang telah dibuat  dari compile file.bas dari  software BASCOM-AVR dimasukkan ke dalam mikrokontroler. Downloader yang umum digunakan untuk memasukkan data dari komputer ke mikrokontroler yaitu USB-ASP, namun ada pula yang tidak memakai USB-ASP yaitu menggunakan serial paralel port untuk melakukan download programnya.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fourth" Margin="20,20,0,0" Grid.Row="3">
+                    <TextBlock TextWrapping="Wrap">
+                        Untuk sistem kerja dari downloader,  terutama USB-ASP yaitu dengan cara memberikan pin MISO, MOSI, SCK, RESET, dan GROUND pada rangkaian downloader, dipasangkan ke mikrokontroler terutama ATMega yaitu pada pin yang sama MOSI, MISO,SCK, RESET, GROUND.
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Name="Fifth" Margin="20,20,0,0" Grid.Row="4">
+                    <Image x:Name="image2" Source="Assets/Downloader2.jpg" d:LayoutOverrides="Height" />
+                </StackPanel>
+                <StackPanel Name="Sixth" Margin="20,20,0,0" Grid.Row="5" d:LayoutOverrides="TopPosition, BottomPosition">
+                    <TextBlock TextWrapping="Wrap">
+                        Untuk pemasangan downloader dengan paralel port sama dengan USB-ASP yaitu menggunakan MOSI,  MISO,  SCK, RESET dan GND, namun berbedanya yaitu pada konektornya yang menggunakan DB25, sehingga dari mikrokontroler langsung didownload ke komputer melalui kabel paralel. Berikut skemanya jika menggunakan downloader paralel.
+                    </TextBlock>
+                    <Image x:Name="image1" Source="Assets/Downloader3.jpg" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Margin="0,20,0,0">
+                        Untuk skema menggunakan USB-ASP sama seperti menggunakan downloader paralel port yang mana menggunakan media kabel sebagai media penghubunganya, namun perbedaannya jika pada paralel port  menggunakan kabel paralel, pada USB-ASP menggunakan kabel USB male to male sehungga tinggal colok dari usb komputer ke kepala USB-ASP dan dari USB-ASP dihubungkan ke minimum system berikut skemanya.
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

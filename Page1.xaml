@@ -1,0 +1,189 @@
+﻿<Page
+    x:Class="Microtic.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Microtic"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FF054726">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Phone">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="DownloaderButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="DownloaderButton.(Grid.Column)" Value="0"/>
+                        <Setter Target="DownloaderButton.(Grid.Row)" Value="4"/>
+                        <Setter Target="DownloaderButton.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="DownloaderButton.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="DiodaButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="DiodaButton.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="DiodaButton.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="DiodaButton.(Grid.Row)" Value="3"/>
+                        <Setter Target="PCBButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="PCBButton.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="PCBButton.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="PCBButton.(Grid.Row)" Value="3"/>
+                        <Setter Target="PushButtonButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="PushButtonButton.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="PushButtonButton.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="PushButtonButton.(Grid.Column)" Value="1"/>
+                        <Setter Target="PushButtonButton.(Grid.Row)" Value="2"/>
+                        <Setter Target="LEDButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="LEDButton.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="LEDButton.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="LEDButton.(Grid.Column)" Value="0"/>
+                        <Setter Target="LEDButton.(Grid.Row)" Value="2"/>
+                        <Setter Target="ICButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="ICButton.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="ICButton.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="ICButton.(Grid.Column)" Value="1"/>
+                        <Setter Target="KapasitorButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="KapasitorButton.(Grid.Column)" Value="0"/>
+                        <Setter Target="KapasitorButton.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="KapasitorButton.(FrameworkElement.VerticalAlignment)" Value="Bottom"/>
+                        <Setter Target="KapasitorButton.(Grid.Row)" Value="1"/>
+                        <Setter Target="ResistorButton.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="ResistorButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="ResistorButton.(FrameworkElement.Height)" Value="NaN"/>
+                        <Setter Target="TransistorButton.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="TransistorButton.(FrameworkElement.Height)" Value="NaN"/>
+                        <Setter Target="TransistorButton.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="KapasitorButton.(FrameworkElement.Height)" Value="128"/>
+                        <Setter Target="ICButton.(FrameworkElement.Height)" Value="128"/>
+                        <Setter Target="LEDButton.(FrameworkElement.Height)" Value="128"/>
+                        <Setter Target="PushButtonButton.(FrameworkElement.Height)" Value="128"/>
+                        <Setter Target="PCBButton.(FrameworkElement.Height)" Value="128"/>
+                        <Setter Target="DiodaButton.(FrameworkElement.Height)" Value="128"/>
+                        <Setter Target="DownloaderButton.(FrameworkElement.Height)" Value="128"/>
+                        <Setter Target="PushButtonButton.(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Value="1"/>
+                        <Setter Target="ICButton.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="LEDButton.(FrameworkElement.Width)" Value="NaN"/>
+                        <Setter Target="DownloaderButton.(Grid.RowSpan)" Value="1"/>
+                        <Setter Target="DownloaderButton.(FrameworkElement.Width)" Value="NaN"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Desktop">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Name="ResistorButton"
+                Click="ResistorButton_Click"
+                Content="Resostor"
+                Grid.Column="0" Grid.Row="0" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" d:LayoutOverrides="Width, LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" Background="{x:Null}" Foreground="White" />
+        <Button Name="TransistorButton"
+                Click="TransistorButton_Click"
+                Content="Transistor"
+                Grid.Row="0" Grid.Column="1"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" d:LayoutOverrides="Width, Height, LeftMargin, RightMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" Background="{x:Null}" Foreground="White" />
+        <Button Name="KapasitorButton"
+                Click="KapasitorButton_Click"
+                Content="Kapasitor"
+                Grid.Row="0" Grid.Column="2"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Background="{x:Null}" Foreground="White" />
+        <Button Name="ICButton"
+                Click="ICButton_Click"
+                Content="IC"
+                Grid.Row="1" Grid.Column="0"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" d:LayoutOverrides="Width, LeftMargin, RightMargin, LeftPosition, RightPosition" Background="{x:Null}" Foreground="White" />
+        <Button Name="LEDButton"
+                Click="LEDButton_Click"
+                Content="LED"
+                Grid.Row="1" Grid.Column="1"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" d:LayoutOverrides="Width, LeftPosition, RightPosition" Background="{x:Null}" Foreground="White" />
+        <Button Name="PushButtonButton"
+                Click="PushButtonButton_Click"
+                Content="PushButton"
+                Grid.Row="1" Grid.Column="2"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Foreground="White" >
+            <Button.RenderTransform>
+                <CompositeTransform/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Name="PCBButton"
+                Click="PCBButton_Click"
+                Content="PCB"
+                Grid.Row="2" Grid.Column="0"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Background="{x:Null}" Foreground="White" />
+        <Button Name="DiodaButton"
+                Click="DiodaButton_Click"
+                Content="Dioda"
+                Grid.Row="2" Grid.Column="1"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Background="{x:Null}" Foreground="White" />
+        <Button Name="DownloaderButton"
+                Click="DownloaderButton_Click"
+                Content="Downloader"
+                Grid.Row="2" Grid.Column="2"  
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch" Background="{x:Null}" Foreground="White" />
+
+    </Grid>
+</Page>
